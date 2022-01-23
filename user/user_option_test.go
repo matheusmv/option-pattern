@@ -11,7 +11,7 @@ func TestNewUser(t *testing.T) {
 		expectedUser := new(User)
 		expectedUser.username = defaultUsername
 		expectedUser.password = defaultPassword
-		expectedUser.email = defatulEmail
+		expectedUser.email = defaultEmail
 
 		t.Run("should return a User with default parameters", func(t *testing.T) {
 			user := NewUser()
@@ -19,7 +19,7 @@ func TestNewUser(t *testing.T) {
 			assert.Equal(t, user, expectedUser)
 			assert.Equal(t, user.GetUsername(), defaultUsername)
 			assert.Equal(t, user.GetPassword(), defaultPassword)
-			assert.Equal(t, user.GetEmail(), defatulEmail)
+			assert.Equal(t, user.GetEmail(), defaultEmail)
 		})
 	})
 }
@@ -31,7 +31,7 @@ func TestWithUsername(t *testing.T) {
 		expectedUser := new(User)
 		expectedUser.username = providedUsername
 		expectedUser.password = defaultPassword
-		expectedUser.email = defatulEmail
+		expectedUser.email = defaultEmail
 
 		t.Run("should return a User with the appropriate options defined", func(t *testing.T) {
 			user := NewUser(
@@ -51,7 +51,7 @@ func TestWithPassword(t *testing.T) {
 		expectedUser := new(User)
 		expectedUser.username = defaultUsername
 		expectedUser.password = providedPassword
-		expectedUser.email = defatulEmail
+		expectedUser.email = defaultEmail
 
 		t.Run("should return a User with the appropriate options defined", func(t *testing.T) {
 			user := NewUser(

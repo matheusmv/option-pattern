@@ -5,14 +5,14 @@ type UserOption func(*User)
 const (
 	defaultUsername = "default username"
 	defaultPassword = "default password"
-	defatulEmail    = "default email"
+	defaultEmail    = "default email"
 )
 
 func NewUser(opts ...UserOption) *User {
 	user := &User{
 		username: defaultUsername,
 		password: defaultPassword,
-		email:    defatulEmail,
+		email:    defaultEmail,
 	}
 
 	for _, opt := range opts {
